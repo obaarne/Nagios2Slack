@@ -14,10 +14,10 @@ FOOTER_ICON=http://env.baarnes.com/Nagios.png
 case $4 in
 
 "DOWN")
-  MSG_COLOR="#EE0000"
+  MSG_COLOR="danger"
   ;;
 "UP")
-  MSG_COLOR="#00CC00"
+  MSG_COLOR="good"
   ;;
 *)
   MSG_COLOR="#CCCCCC"
