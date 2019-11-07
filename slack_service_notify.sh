@@ -14,13 +14,13 @@ FOOTER_ICON=http://env.baarnes.com/Nagios.png
 case $5 in
 
 "CRITICAL")
-  MSG_COLOR="#EE0000"
+  MSG_COLOR="danger"
   ;;
 "WARNING")
-  MSG_COLOR="#FFDD00"
+  MSG_COLOR="warning"
   ;;
 "OK")
-  MSG_COLOR="#00CC00"
+  MSG_COLOR="good"
   ;;
 *)
   MSG_COLOR="#CCCCCC"
