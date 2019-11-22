@@ -2,8 +2,8 @@
 
 Nagios notifications for Slack, with formatted messages :
 
-![OK](http://env.baarnes.com/nagios2slack/ok.png)
-![Critical](http://env.baarnes.com/nagios2slack/critical.png)
+![OK](http://env.baarnes.com/nagios2slack/ok.png?git)
+![Critical](http://env.baarnes.com/nagios2slack/critical.png?git)
 
 * Set up an incoming webhook integration in your Slack workspace.</br>
 ( https://my.slack.com/services/new/incoming-webhook/ )
