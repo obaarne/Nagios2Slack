@@ -3,6 +3,9 @@
 # Edit your Slack hook URL and footer icon URL
 SLACK_URL=https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX
 FOOTER_ICON=http://env.baarnes.com/Nagios.png
+NAGIOSFQDN=YOUR_NAGIOS_FQDN
+HOSTURL=https://$NAGIOSFQDN/nagios/cgi-bin/status.cgi?host=
+
 
 # Host Notification command example :
 
@@ -28,7 +31,7 @@ IFS='%'
 
 SLACK_MSG="payload={\"attachments\":[{\"color\": \"$MSG_COLOR\",\"title\": \"Host $1 notification\",
 \"text\": \"Host:        $2\\nIP:             $3\\nState:        $4\"},
-{\"color\": \"$MSG_COLOR\",\"title\":\"Additional Info :\",\"text\":\"\\n$5\",
+{\"color\": \"$MSG_COLOR\",\"title\":\"Additional Info :\",\"text\":\"\\n$5 \\nUrl:            $HOSTURL$2\",
 \"footer\": \"Nagios notification: $6\",\"footer_icon\": \"$FOOTER_ICON\"}]}"
 
 #Send message to Slack
