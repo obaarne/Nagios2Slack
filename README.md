@@ -12,6 +12,8 @@ Nagios notifications for Slack, with formatted messages :
 
 * Edit the Slack URLs in both scripts to reflect the webhooks you created in Slack.
 
+* Edit yout nagios host full qualified domain name on both scripts.
+
 * Define the new notification commands in Nagios.
 ( see examples in slack_commands.cfg, modify any paths as required)
 

@@ -3,7 +3,8 @@
 # Edit your Slack hook URL and footer icon URL
 SLACK_URL=https://hooks.slack.com/services/XXXXXXXXX/XXXXXXXXX/XXXXXXXXXXXXXXXXXXXXXXXX
 FOOTER_ICON=http://env.baarnes.com/Nagios.png
-
+NAGIOSFQDN=YOUR_NAGIOS_FQDN
+HOSTURL=https://$NAGIOSFQDN/nagios/cgi-bin/status.cgi?host=
 # Service Notification command example :
 
 # define command {
@@ -31,7 +32,7 @@ IFS='%'
 
 SLACK_MSG="payload={\"attachments\":[{\"color\": \"$MSG_COLOR\",\"title\": \"Service $1 notification\",
 \"text\": \"Host:        $2\\nIP:             $3\\nService:    $4\\nState:        $5\"},
-{\"color\": \"$MSG_COLOR\",\"title\":\"Additional Info :\",\"text\":\"\\n$6\",
+{\"color\": \"$MSG_COLOR\",\"title\":\"Additional Info :\",\"text\":\"\\n$6 \\nUrl:            $HOSTURL$2\",
 \"footer\": \"Nagios notification: $7\",\"footer_icon\": \"$FOOTER_ICON\"}]}"
 
 #Send message to Slack
